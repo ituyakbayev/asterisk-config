@@ -1,7 +1,7 @@
 module github.com/ituyakbayev/asterisk-config
 
 require (
-	github.com/ituyakbayev/kubetemplate v0.2.0
+	github.com/ituyakbayev/kubetemplate v0.6.0
 	github.com/ituyakbayev/netdiscover v1.2.4
 	github.com/golang/protobuf v1.3.2 // indirect
 	github.com/nats-io/nuid v1.0.1
