@@ -16,8 +16,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/CyCoreSystems/kubetemplate"
-	"github.com/CyCoreSystems/netdiscover/discover"
+	"github.com/ituyakbayev/kubetemplate"
+	"github.com/ituyakbayev/netdiscover/discover"
 	"github.com/pkg/errors"
 )
 
