@@ -125,10 +125,10 @@
 
 ; Basic UDP transport
 ;
-[transport-udp]
-type=transport
-protocol=udp    ;udp,tcp,tls,ws,wss,flow
-bind=0.0.0.0
+;[transport-udp]
+;type=transport
+;protocol=udp    ;udp,tcp,tls,ws,wss,flow
+;bind=0.0.0.0
 
 ; UDP transport behind NAT
 ;
@@ -604,7 +604,7 @@ bind=0.0.0.0
 
 ; MODULE PROVIDING BELOW SECTION(S): res_pjsip
 ;==========================ENDPOINT SECTION OPTIONS=========================
-[endpoint]
+;[endpoint]
 ;  SYNOPSIS: Endpoint
 ;100rel=yes     ; Allow support for RFC3262 provisional ACK tags (default:
                 ; "yes")
@@ -634,7 +634,7 @@ bind=0.0.0.0
                                 ; If set to "update", send UPDATE regardless
                                 ; of what the remote Allows.
                                 ; (default: "invite")
-direct_media=no       ; Determines whether media may flow directly between
+;direct_media=yes       ; Determines whether media may flow directly between
                         ; endpoints (default: "yes")
 ;disable_direct_media_on_nat=no ; Disable direct media session refreshes when
                                 ; NAT obstructs the media session (default:
@@ -645,7 +645,7 @@ direct_media=no       ; Determines whether media may flow directly between
 ;bind_rtp_to_media_address=     ; Bind the RTP session to the media_address.
                                 ; This causes all RTP packets to be sent from
                                 ; the specified address. (default: "no")
-force_rport=yes        ; Force use of return port (default: "yes")
+;force_rport=yes        ; Force use of return port (default: "yes")
 ;ice_support=no ; Enable the ICE mechanism to help traverse NAT (default: "no")
 ;identify_by=username   ; A comma-separated list of ways the Endpoint or AoR can be
                         ; identified.
@@ -676,7 +676,7 @@ force_rport=yes        ; Force use of return port (default: "yes")
                         ; must be provided (default: "")
 ;rewrite_contact=no     ; Allow Contact header to be rewritten with the source
                         ; IP address port (default: "no")
-rtp_symmetric=yes       ; Enforce that RTP must be symmetric (default: "no")
+;rtp_symmetric=no       ; Enforce that RTP must be symmetric (default: "no")
 ;send_diversion=yes     ; Send the Diversion header conveying the diversion
                         ; information to the called user agent (default: "yes")
 ;send_pai=no    ; Send the P Asserted Identity header (default: "no")
@@ -1015,7 +1015,7 @@ rtp_symmetric=yes       ; Enforce that RTP must be symmetric (default: "no")
                         ; outgoing packet.
 
 ;==========================AOR SECTION OPTIONS=========================
-[aor]
+;[aor]
 ;  SYNOPSIS: The configuration for a location of an endpoint
 ;contact=       ; Permanent contacts assigned to AoR (default: "")
 ;default_expiration=3600        ; Default expiration time in seconds for
@@ -1039,8 +1039,8 @@ rtp_symmetric=yes       ; Enforce that RTP must be symmetric (default: "no")
                         ; refreshing.
                         ; (default: "no")
 ;type=  ; Must be of type aor (default: "")
-qualify_frequency=0    ; Interval at which to qualify an AoR (default: "0")
-qualify_timeout=3.0      ; Qualify timeout in fractional seconds (default: "3.0")
+;qualify_frequency=0    ; Interval at which to qualify an AoR (default: "0")
+;qualify_timeout=3.0      ; Qualify timeout in fractional seconds (default: "3.0")
 ;authenticate_qualify=no        ; Authenticates a qualify request if needed
                                 ; (default: "no")
 ;outbound_proxy=        ; Proxy through which to send OPTIONS requests, a full SIP URI
@@ -1092,12 +1092,12 @@ qualify_timeout=3.0      ; Qualify timeout in fractional seconds (default: "3.0"
 ;type=  ; Must be of type system (default: "")
 
 ;==========================GLOBAL SECTION OPTIONS=========================
-[global]
+;[global]
 ;  SYNOPSIS: Options that apply globally to all SIP communications
 ;max_forwards=70        ; Value used in Max Forwards header for SIP requests
                         ; (default: "70")
 ;type=  ; Must be of type global (default: "")
-user_agent=Asterisk PBX        ; Allows you to change the user agent string
+;user_agent=Asterisk PBX        ; Allows you to change the user agent string
                                 ; The default user agent string also contains
                                 ; the Asterisk version. If you don't want to
                                 ; expose this, change the user_agent string.
